@@ -1,0 +1,7 @@
+Usage:
+ruby machine_learning.rb <path/to/group>
+
+Examples:
+ruby machine_learning.rb breast-cancer
+
+It will look files "breast-cancer.data", "breast-cancer.names" and "breast-cancer.test" at current directory.
