@@ -37,8 +37,6 @@ class SecondPotentialFunction
 end
 
 class Solver
-  attr_reader :first, :second
-  
   def initialize(function, first, second)
     @function = function
     @points = []
@@ -172,11 +170,62 @@ def load_data(filename, name_options)
   points
 end
 
-def analyze(group)
+def normalize_options(points)
+  length = points.first.first.length
+  max_values = Array.new(length)
+  min_values = Array.new(length)
+  
+  points.each do |point, result|
+    point.each_with_index do |v, i|
+      if max_values[i].nil? || v > max_values[i]
+        max_values[i] = v
+      end
+      
+      if min_values[i].nil? || v < min_values[i]
+        min_values[i] = v
+      end
+    end
+  end
+  
+  [max_values, min_values]
+end
+
+def normalize(points, max_values, min_values)
+  points.map do |point, result|
+    p = []
+    point.each_with_index do |v, i|
+      p << (v - min_values[i]) / (max_values[i] - min_values[i])
+    end
+    [p, result]
+  end
+end
+
+def analyze(group, lambda)
   name_options = NameOptions.new("#{group}.names")
   input_points = load_data("#{group}.data", name_options)
   test_points = load_data("#{group}.test", name_options)
-  solver = Solver.new(PotentialFunction.new(0.5), *name_options.result_values)
+  
+  max_values, min_values = normalize_options(input_points + test_points)
+  
+  input_points = normalize(input_points, max_values, min_values)
+  test_points = normalize(test_points, max_values, min_values)
+  
+  # File.open("new_#{group}.data", "w+") do |file|
+  #   input_points.each do |point, result|
+  #     file.puts "#{point.join(", ")}, #{result}"
+  #   end
+  # end
+  # 
+  # File.open("new_#{group}.test", "w+") do |file|
+  #   test_points.each do |point, result|
+  #     file.puts "#{point.join(", ")}, #{result}"
+  #   end
+  # end
+  
+  
+  # puts input_points.inspect
+  
+  solver = Solver.new(PotentialFunction.new(lambda), *name_options.result_values)
   solver.train_all(input_points)
   
   all = test_points.length
@@ -190,7 +239,7 @@ def analyze(group)
   puts "ALL TESTS: #{all}"
   puts "MATCHES: #{matches}"
   puts "NONMATCHES: #{all - matches}"
-  puts "NONMATCHES%: #{(all - matches).to_f / all}"
+  puts "NONMATCHES%: #{(all - matches).to_f / all * 100}"
 end
 
-analyze(ARGV[0] || "housing")
+analyze(ARGV[0] || "housing", (ARGV[1] || 0.1).to_f)
