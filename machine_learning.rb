@@ -1,18 +1,4 @@
-class Array
-  def sum(&block)
-    inject(0.0) { |memo, object| memo + (block.nil? ? object : block.call(object)) }
-  end
-end
-
-class Integer
-  def odd?
-    self % 2 == 1
-  end
-
-  def even?
-    self % 2 == 0
-  end
-end
+require "monkey_patching"
 
 class PotentialFunction
   def initialize(lambda)
