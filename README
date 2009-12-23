@@ -2,6 +2,6 @@ Usage:
 ruby machine_learning.rb <path/to/group>
 
 Examples:
-ruby machine_learning.rb breast-cancer
+ruby machine_learning.rb
 
-It will look files "breast-cancer.data", "breast-cancer.names" and "breast-cancer.test" at current directory.
+It will look files "test.data", "test.names" and "test.test" at current directory.

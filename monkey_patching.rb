@@ -19,3 +19,9 @@ class Integer
     self % 2 == 0
   end
 end
+
+class Integer
+  def to_bit_array(size)
+    (0..(size - 1)).map { |i| self[i] }.reverse
+  end
+end
