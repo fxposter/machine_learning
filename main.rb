@@ -44,6 +44,8 @@ class Solver
       next_temporary_point = neuron_inputs.map { |e| e.sign }
     end
     
+    print_point(convert_to_signs(point))
+    print_point(temporary_point)
     @solve_result[temporary_point]
   end
   
@@ -65,6 +67,17 @@ private
   end
 end
 
+def print_point(temporary_point)
+  0.upto(9) do |i|
+    s = []
+    0.upto(9) do |j|
+      s << (temporary_point[10 * i + j] == -1 ? "0" : "1")
+    end
+    puts s.join("")
+  end
+  puts
+end
+
 def analyse(group)
   name_options = NameOptions.new("#{group}.names")
   input_points = load_data("#{group}.data", name_options)
@@ -76,6 +89,8 @@ def analyse(group)
   matches = 0
   test_points.each do |point, original_result|
     result = solver.test(point)
+    
+    puts "R: #{result}, OR: #{original_result}"
     matches += 1 if result == original_result
   end
   

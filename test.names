@@ -1,6 +1,135 @@
-1, 2
+m,a,g,?
 
-1: false, true
-2: false, true
-3: false, true
-4: false, true
+1: f, t
+2: f, t
+3: f, t
+4: f, t
+5: f, t
+6: f, t
+7: f, t
+8: f, t
+9: f, t
+10: f, t
+1: f, t
+2: f, t
+3: f, t
+4: f, t
+5: f, t
+6: f, t
+7: f, t
+8: f, t
+9: f, t
+10: f, t
+1: f, t
+2: f, t
+3: f, t
+4: f, t
+5: f, t
+6: f, t
+7: f, t
+8: f, t
+9: f, t
+10: f, t
+1: f, t
+2: f, t
+3: f, t
+4: f, t
+5: f, t
+6: f, t
+7: f, t
+8: f, t
+9: f, t
+10: f, t
+1: f, t
+2: f, t
+3: f, t
+4: f, t
+5: f, t
+6: f, t
+7: f, t
+8: f, t
+9: f, t
+10: f, t
+1: f, t
+2: f, t
+3: f, t
+4: f, t
+5: f, t
+6: f, t
+7: f, t
+8: f, t
+9: f, t
+10: f, t
+1: f, t
+2: f, t
+3: f, t
+4: f, t
+5: f, t
+6: f, t
+7: f, t
+8: f, t
+9: f, t
+10: f, t
+1: f, t
+2: f, t
+3: f, t
+4: f, t
+5: f, t
+6: f, t
+7: f, t
+8: f, t
+9: f, t
+10: f, t
+1: f, t
+2: f, t
+3: f, t
+4: f, t
+5: f, t
+6: f, t
+7: f, t
+8: f, t
+9: f, t
+10: f, t
+1: f, t
+2: f, t
+3: f, t
+4: f, t
+5: f, t
+6: f, t
+7: f, t
+8: f, t
+9: f, t
+10: f, t
+
+| f,t,t,t,t,t,t,t,f,f,
+| f,f,t,t,t,t,t,f,f,f,
+| f,t,f,t,t,t,f,t,f,f,
+| f,t,t,f,t,f,f,t,f,f,
+| f,t,t,t,f,t,t,t,f,f,
+| f,t,t,t,t,t,t,t,f,f,
+| f,t,t,t,t,t,t,t,f,f,
+| f,t,t,t,t,t,t,t,f,f,
+| f,t,t,t,t,t,t,t,f,f,
+| f,t,t,t,t,t,t,t,f,f,
+| 
+| t,t,t,t,f,f,t,t,t,t,
+| t,t,t,f,t,t,f,t,t,t,
+| t,t,f,t,t,t,t,f,t,t,
+| t,f,t,t,t,t,t,t,f,t,
+| f,f,t,t,t,t,t,t,t,f,
+| f,f,t,t,t,t,t,t,t,f,
+| f,f,t,t,t,t,t,t,t,f,
+| f,f,f,f,f,f,f,f,f,f,
+| f,f,t,t,t,t,t,t,t,f,
+| f,f,t,t,t,t,t,t,t,f,
+| 
+| t,f,f,f,f,f,f,f,t,t,
+| f,t,t,t,t,t,t,t,f,t,
+| f,t,t,t,t,t,t,t,t,f,
+| f,t,t,t,t,t,t,t,t,t,
+| f,t,t,t,t,t,t,t,t,t,
+| f,t,t,t,t,t,t,t,t,t,
+| f,t,t,t,t,f,f,f,f,f,
+| f,t,t,t,t,t,t,t,f,f,
+| f,f,f,f,f,f,f,f,f,f,
+| t,f,f,f,f,f,f,f,f,t
