@@ -4,4 +4,4 @@ ruby machine_learning.rb <path/to/group>
 Examples:
 ruby machine_learning.rb
 
-It will look files "test.data", "test.names" and "test.test" at current directory.
+It will use files "test.data", "test.names" and "test.test" at current directory.
